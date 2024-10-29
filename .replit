@@ -1,0 +1,13 @@
+modules = ["web", "nodejs-22"]
+run = "npx http-server ."
+modules = ["nodejs-22"]
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "npx http-server ."]
+
+[[ports]]
+localPort = 8080
+externalPort = 80
